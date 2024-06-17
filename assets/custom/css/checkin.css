@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------- Background content -------- */
+
+.wrapp_content{
+    background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    max-width: 1080px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapp_bg_content{
+    width: 100%;
+    height: 90%;
+  
+}
+
+.bg_content{
+    background-image: url("https://app.buktamdigital.my.id/assets/img/bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px;
+    height: 650px;
+    margin: auto;
+}
+
+.text_content_top{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 37px 0;
+    gap: 5px;
+}
+
+.text_style_S{
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+
+}
+.text_style_bold{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 15px;
+    text-align: center;
+    color: white;
+}
+
+/* --------- Background VIP -------- */
+
+.style_bg_vip{
+    height: 30px;
+    width: 260px;
+    background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_content_bottom{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.wrapp_text_content{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.flew_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 15px;
+}
+.col_column{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 210px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.garis_tengah{
+    width: 1px;
+    height: 50px;
+    background-color: white;
+}
+
+.form_input_value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+    position: relative;
+    
+}
+.form_input_value select{
+    border-radius: 6px;
+    border: none;
+
+}
+.form_input_value option{
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.select-number{
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0 5px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif; 
+    /*background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);*/
+    background: white;
+}
+
+
+.style_btn_submit{
+    background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+    border: none;
+    border-radius: 6px;
+    padding: 0 15px ;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.style_text_tamu{
+    margin-bottom: 5px;
+}
+
+.wrapp_col_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 410px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* --------- Footer -------- */
+
+.style_footer{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 8px;
+    gap: 5px;
+}
+
+.style_footer img{
+    height: 20px;
+}
+
+/*--------select------------*/
+
+select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#000;
+   cursor:pointer;
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+   display: block;
+}
+.select-camera {
+   position: relative;
+   display: flex;
+   width: 20em;
+   height: 3em;
+   line-height: 3;
+   background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+   overflow: hidden;
+   border-radius: .25em;
+}
+.select-camera::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: linear-gradient(180deg, #FF8317 0%, #FF4700 100%);
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+.select-camera:hover::after {
+   color: #ffffff;
+}
+
+/* ------------- Responsive --------- */
+.icon{
+    position: absolute;
+  }
+  
+  .icon::after {
+    content: "";
+    justify-self: center;
+    text-align: center;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    position: absolute;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: rgb(31, 31, 31);
+    z-index: 999;
+    left: -35px;
+    top: -3px;
+  
+  }

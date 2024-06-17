@@ -1,0 +1,67 @@
+.area-scanqr {
+  max-width: 450px;
+}
+
+button.html5-qrcode-element {
+  background-color: rgb(225, 225, 225);
+  border: 1px solid transparent;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border-radius: 0.5rem;
+  padding: 0.1rem 1rem;
+}
+
+
+
+
+
+.area-scanqr #reader::before {
+  content: '';
+  position:absolute;
+  top:0;
+  left:0;
+  width:300px;
+  height:200px;
+  background-size:300px;
+  animation:animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+      height:0%;
+  }
+  
+  50% {
+      height:90%;
+  }
+}
+
+
+
+.area-scanqr #reader::after {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right: 0px;
+  height:14px;
+  animation: moveLine 3s ease-in-out infinite;
+  background-color: #d87e005e;
+  border: 4px dotted #f0a61b;
+  display: none;
+}
+
+
+@keyframes moveLine {
+  0%, 100% {
+      top: 5%;
+  }
+  
+  50% {
+      top:80%;
+  }
+}
+
+
+.area-jumlah-tamu {
+  max-width: 350px;
+}
