@@ -543,12 +543,8 @@ class Tamu extends CI_Controller
     $wa = $event['wa'];
     $text = str_replace('[NAMA-TAMU]', $cekTamu['nama'], $wa);
     $text = str_replace('[LINK]', $link, $text);
-    if($event['is_qr'] != 0) {
-      $text = str_replace('[E-INVITATION]', '', $text);
-    } else {
-      $img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$tamu['id']);
-      $text = str_replace('[E-INVITATION]', $img_undangan, $text);
-    }
+    $img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$cekTamu['id']);
+    $text = str_replace('[E-INVITATION]', $img_undangan, $text);
 
     $json = [
       'kode' => 1,
@@ -562,7 +558,6 @@ class Tamu extends CI_Controller
     $event = $this->m_event->byId($this->session->userdata('sesiEventNewImam'));
     $id = $this->input->post('id');
     $cekTamu = $this->m_tamu->byId($id);
-
     $nama = $cekTamu['nama'];
     $nama = str_replace('&', 'dan', $nama);
     $nama = str_replace("'", '', $nama);
@@ -571,12 +566,10 @@ class Tamu extends CI_Controller
     $namakode = urlencode($nama);
     $link = $event['undangan'] . '?to=' . $namakode;
     $img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$id);
-
     $wa = $event['wa'];
     $text = str_replace('[NAMA-TAMU]', $cekTamu['nama'], $wa);
     $text = str_replace('[LINK]', $link, $text);
     $text = str_replace('[E-INVITATION]', $img_undangan, $text);
-    
     $link = urlencode($text);
     $wa = 'https://wa.me/'. $cekTamu['nomor_wa'] . '?text=' . $link;
     echo $wa;

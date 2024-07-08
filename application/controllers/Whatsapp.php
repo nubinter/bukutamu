@@ -541,6 +541,7 @@ class Whatsapp extends CI_Controller
 		$event = $this->m_event->byId($id_event);
 		$tamu = $this->db->get_where('tamu', ['id' => $id_tamu])->row_array();
 		$user = $this->m_user->byUser($this->session->userdata('loginAksesNewImam'));
+		$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$tamu['id']);
 		if($user['kuota_wa'] > 0 OR $user['role'] == 1) {
 		    if($event['is_qr'] != 0) {
         		$options = new Options();
@@ -568,7 +569,7 @@ class Whatsapp extends CI_Controller
         		$wa = $event['wa'];
         		$text = str_replace('[NAMA-TAMU]', $nama, $wa);
         		$text = str_replace('[LINK]', $link_undangan, $text);
-        		$text = str_replace('[E-INVITATION]', '', $text);
+        		$text = str_replace('[E-INVITATION]', $img_undangan, $text);
         		$caption = $text;
         		$media = base_url('assets/whatsapp/undangan/'.$rand.'.jpg');
 				$result = send_image($sender, $caption, $media, $tamu['nomor_wa']);
@@ -579,7 +580,6 @@ class Whatsapp extends CI_Controller
         		$nama = str_replace('&', 'dan', $nama);
         		$namakode = urlencode($nama);
         		$link_undangan = $event['undangan'].'?to='.$namakode;
-				$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$tamu['id']);
         		$wa = $event['wa'];
         		$text = str_replace('[NAMA-TAMU]', $nama, $wa);
         		$text = str_replace('[LINK]', $link_undangan, $text);
@@ -638,6 +638,7 @@ class Whatsapp extends CI_Controller
     							$nama = str_replace('&', 'dan', $nama);
     							$nama = str_replace("'", '', $nama);
     							$nama = str_replace('"', '', $nama);
+								$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$receiver['id']);
     							if($event['is_qr']) {
         							$options = new Options();
         							$options->set('isRemoteEnabled', true);
@@ -650,21 +651,19 @@ class Whatsapp extends CI_Controller
         							$rand = time();
     		                        $output = FCPATH.'assets/whatsapp/'.$rand.'.pdf';
     		                        file_put_contents($output, $dompdf->output());
-        
         							$image = new Imagick();
         							$image->readImage($output);
         							$image->setImageFormat("jpg");
         							$img_name = FCPATH.'assets/whatsapp/undangan/' . $rand.'.jpg';
         							$image->writeImage($img_name);
         							unlink($output);
-        							
         							$sender = $campaign['sender'];
         							$namakode = urlencode($nama);
         							$link_undangan = $event['undangan'].'?to='.$namakode;
         							$template = $campaign['template'];
         							$text = str_replace('[NAMA-TAMU]', $nama, $template);
         							$text = str_replace('[LINK]', $link_undangan, $text);
-        							$text = str_replace('[E-INVITATION]', '', $text);
+        							$text = str_replace('[E-INVITATION]', $img_undangan, $text);
         							$caption = $text;
         							$media = base_url('assets/whatsapp/undangan/'.$rand.'.jpg');
                         			$result = send_image($sender, $caption, $media, $receiver['nomor_wa']);
@@ -677,7 +676,7 @@ class Whatsapp extends CI_Controller
         							$text = str_replace('[NAMA-TAMU]', $nama, $template);
         							$text = str_replace('[LINK]', $link_undangan, $text);
         							$text = str_replace('[E-INVITATION]', $img_undangan, $text);
-									$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$receiver['id']);
+									
         							$caption = $text;
 								    $media = base_url('assets/img/event/'.$event['poto']);
                     				$result = send_image($sender, $caption, $media, $receiver['nomor_wa']);
@@ -741,6 +740,7 @@ class Whatsapp extends CI_Controller
     							$nama = str_replace('&', 'dan', $nama);
     							$nama = str_replace("'", '', $nama);
     							$nama = str_replace('"', '', $nama);
+								$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$tamu);
         						if($event['is_qr']) {
         							$options = new Options();
         							$options->set('isRemoteEnabled', true);
@@ -765,7 +765,7 @@ class Whatsapp extends CI_Controller
         							$template = $campaign['template'];
         							$text = str_replace('[NAMA-TAMU]', $nama, $template);
         							$text = str_replace('[LINK]', $link_undangan, $text);
-        							$text = str_replace('[E-INVITATION]', '', $text);
+        							$text = str_replace('[E-INVITATION]', $img_undangan, $text);
         							$caption = $text;
         							$media = base_url('assets/whatsapp/undangan/'.$rand.'.jpg');
                     				$result = send_image($sender, $caption, $media, $receiver['nomor_wa']);
@@ -774,7 +774,6 @@ class Whatsapp extends CI_Controller
 								    $sender = $campaign['sender'];
         							$namakode = urlencode($nama);
         							$link_undangan = $event['undangan'].'?to='.$namakode;
-									$img_undangan = base_url('whatsapp/undangan/'.$event['id'].'/'.$tamu);
         							$template = $campaign['template'];
         							$text = str_replace('[NAMA-TAMU]', $nama, $template);
         							$text = str_replace('[LINK]', $link_undangan, $text);
