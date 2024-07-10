@@ -15,7 +15,7 @@ class Home extends CI_Controller
     sedangLogout();
   }
 
-  public function index()
+  public function index($scan = 'hide')
   {
     setcoolor();
     if (!$this->session->userdata('sesiEventNewImam')) {
@@ -25,6 +25,7 @@ class Home extends CI_Controller
     $event = $this->m_event->byId($this->session->userdata('sesiEventNewImam'));
     $data['event'] = $event;
     $data['user'] = $user;
+    $data['scan'] = $scan;
     $data['descr'] = 'Bukutamu Digital Masa Kini!';
     $data['icon'] = 'logo.png';
 	$data['icon1'] = 'logo1.png';
@@ -246,7 +247,7 @@ class Home extends CI_Controller
 
 
   
-  public function scanQrcode($detail = 'hide', $id = null)
+  public function scanQrcode($detail = 'hide', $id = null, $scan = 'hide')
   {
     $user = $this->m_user->byUser($this->session->userdata('loginAksesNewImam'));
     $event = $this->m_event->byId($this->session->userdata('sesiEventNewImam'));
@@ -262,6 +263,7 @@ class Home extends CI_Controller
     }
     $data['event'] = $event;
     $data['user'] = $user;
+    $data['scan'] = $scan;
     $data['descr'] = base_url() . '- Buku Tamu';
     $data['icon'] = 'logo.png';
 	$data['icon1'] = 'logo1.png';
