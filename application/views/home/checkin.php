@@ -326,7 +326,11 @@
                         position: 'top-center'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location.replace(UrLBase + 'home');
+                            <?php if($scan == 'show') { ?>
+                                window.location.replace(UrLBase + 'home/index/show');
+                            <?php } else { ?>
+                                window.location.replace(UrLBase + 'home');
+                            <?php } ?>
                         }
                     })
                     <?php } else { ?>
