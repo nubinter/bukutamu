@@ -42,7 +42,7 @@ function onKeyPress(event) {
 				document.getElementById("scanNamaTamu").value = "";
 				console.log(response);
 				if (response.kode == 1) {
-					window.location.replace(UrLBase + 'home/scanQrcode/show/'+response.idt);
+					window.location.replace(UrLBase + 'home/scanQrcode/show/'+response.idt+'/show');
 				}
 				if (response.kode == 3) {
 					Swal.fire({

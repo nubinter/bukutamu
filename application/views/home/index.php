@@ -338,8 +338,11 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <input type="text" class="form-control" id="scanNamaTamu" placeholder="Scan qr menggunakan barcode scanner">
+          <input type="text" class="form-control" id="scanNamaTamu" placeholder="Tap box untuk mendapatkan fokus scanner">
           <span class="mencariData2 text-info text-9">Mencari data.....</span>
+        </div>
+         <div>
+         <img src="https://i.pinimg.com/originals/be/ed/ce/beedce7109ab7228d1c6f4d028f30b08.gif" alt="Girl in a jacket" width="100%" height="auto">
         </div>
 
         <hr>
@@ -436,7 +439,9 @@ $('[data-toggle="tooltip"]').tooltip()
 <script src="<?= base_url('assets/custom/js/home1.js?v=' . fileatime('assets/custom/js/home1.js')) ?>"></script>
 
 <script>
-
+    <?php if($scan == 'show') { ?>
+    $('.modal#scannerExt').modal('show');
+    <?php } ?>
     $('#cariTamuHome').on('click', function (e) {
       e.preventDefault();
       $('.modal#moadlListCekin').modal('hide');
