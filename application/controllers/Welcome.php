@@ -59,13 +59,13 @@ class Welcome extends CI_Controller
 
     if (!$tamu) {
         $data = '<section class="wrapping__welcome" style="background: url('.base_url('assets/img/event/'.$event['poto']).'); background-repeat: no-repeat; background-size: cover;">';
-        $data .= '<div class="wrapp__logo"><img src="https://app.buktamdigital.my.id/assets/img/page/LOGO_UTAMA_BUKUTAMU_DIGITAL.gif" alt=""></div>';
+        $data .= '<div class="wrapp__logo"><img src="'.base_url('assets/img/page/logo.png').'" alt=""></div>';
         $data .= '<div class="wrapp_text_content">';
         $data .= '</div>';
       echo $data;
     } else {
         $data = '<section class="wrapping__welcome" style="background: url('.base_url('assets/img/event/' . $wel['bg']) . ');  background-repeat: no-repeat; background-size: cover;">';
-        $data .= '<div class="wrapp__logo"><img src="https://app.buktamdigital.my.id/assets/img/page/LOGO_UTAMA_BUKUTAMU_DIGITAL.gif" alt=""></div>';
+        $data .= '<div class="wrapp__logo"><img src="'.base_url('assets/img/page/logo.png').'" alt=""></div>';
         $data .= '<div class="wrapp_text_content">';
         $data .= '<span class="text__x letter__x" style="color:'.$wel['color'].'">'.$wel['welcome'].'</span>';
         $data .= '<h1 class="text__xl" style="color:'.$wel['color'].'">' . $tamu['nama'] . '</h1>';

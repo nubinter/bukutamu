@@ -253,7 +253,7 @@ $setting_class = ($current_page == 'seting') ? 'nav__active' : '';
 
     <nav class="navbar navbar-light nav-header">
       <a class="navbar-brand" href="<?= base_url('home') ?>">
-        <img src="<?= base_url('assets/img/page/LOGO_UTAMA_BUKUTAMU_DIGITAL.gif') ?>" alt="brand" >
+        <img src="<?= base_url('assets/img/page/logo.png') ?>" alt="brand" >
       </a>
 
       <div class="dropdown d-inline-block mr6">
@@ -280,21 +280,10 @@ $setting_class = ($current_page == 'seting') ? 'nav__active' : '';
     
 <div class="container container-page" id="container">
 
-
-
-    
-
-    
-    
-
-
     <div class="area-content" id="area-content">
       <div id="LoadingPage">
         <div class="spinner-border text-custom" role="status"></div>
       </div>
-      
-      
-      
       
 <script>
     

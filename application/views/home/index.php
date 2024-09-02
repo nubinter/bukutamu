@@ -7,66 +7,6 @@
     </a>
 </div>
   
-  
-
-  <!--<div class="d-block text-center">-->
-  <!--  <div class="box-manten shadow">-->
-  <!--    <p id="wed"><?= $event['wedding'] ?></p>-->
-  <!--    <h2><?= $event['nama'] ?></h2>-->
-  <!--    <p id="dt"><?= $this->m_time->longDate($event['tgl']) ?></p>-->
-  <!--  </div>-->
-  <!--</div>-->
-
-  <!--<div class="menu-box">-->
-  <!--  <div class="row">-->
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a href="<?= base_url('tamu') ?>" class="menu">-->
-  <!--        <span class="icon-menu"><i class="far fa-book-alt"></i></span>-->
-  <!--        <p>Data Tamu</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a href="<?= base_url('tamu/report') ?>" class="menu">-->
-  <!--        <span class="icon-menu"><i class="far fa-users"></i></span>-->
-  <!--        <p>Kehadiran</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a href="" class="menu" id="calScan">-->
-  <!--        <span class="icon-menu"><i class="far fa-qrcode"></i></span>-->
-  <!--        <p>Checkin</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a href="<?= base_url('souvenir') ?>" class="menu">-->
-  <!--        <span class="icon-menu"><i class="far fa-hand-holding-heart"></i></span>-->
-  <!--        <p>Souvenir</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a href="<?= base_url('comment') ?>" class="menu">-->
-  <!--        <span class="icon-menu"><i class="far fa-comments-alt"></i></span>-->
-  <!--        <p>Ucapan/RSVP</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-  <!--    <div class="col-sm-3 col-6">-->
-  <!--      <a target="_blank" href="<?= base_url('welcome') ?>" class="menu">-->
-  <!--        <span class="icon-menu"><i class="far fa-desktop"></i></span>-->
-  <!--        <p>Layar Sapa</p>-->
-  <!--      </a>-->
-  <!--    </div>-->
-    
-      <!--<div class="col-sm-3 col-6">-->
-      <!--  <a href="<?= base_url('doorprize') ?>" class="menu">-->
-      <!--    <span class="icon-menu"><i class="fa fa-gift"></i></span>-->
-      <!--    <p>Doorprize</p>-->
-      <!--  </a>-->
-      <!--</div>-->
-  <!--  </div>-->
-  <!--</div>-->
-  
-  
   <style>
     .menu-img {
         width: 90%; /* Sesuaikan lebar gambar sesuai kebutuhan */
@@ -125,7 +65,7 @@
             <!--<div class="col-sm-3 col-6">-->
                 <div class="col col-4">
     <a href="<?= $menuItem['url'] ?>" class="menu" <?php echo isset($menuItem['target']) ? 'target="' . $menuItem['target'] . '"' : ''; ?>>
-        <img src="Https://app.buktamdigital.my.id/assets/img/design/<?= $menuItem['img'] ?>" class="icon-menu-img menu-img" alt="<?= $menuItem['text'] ?>"style="margin-bottom: 10px;">
+        <img src="<?= base_url('assets/img/design/'.$menuItem['img']) ?>" class="icon-menu-img menu-img" alt="<?= $menuItem['text'] ?>"style="margin-bottom: 10px;">
         <p class="menu-text"><?= $menuItem['text'] ?></p>
     </a>
 </div>

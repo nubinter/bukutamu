@@ -124,7 +124,7 @@
 <body class="bodyKonten">
     <section class="wrapping__welcome" style="background: url('<?=base_url('assets/img/event/'.$event['poto'])?>');">
         <div class="wrapp__logo">
-            <img src="https://app.buktamdigital.my.id/assets/img/page/LOGO_UTAMA_BUKUTAMU_DIGITAL.gif" alt="">
+            <img src="<?= base_url('assets/img/page/logo.png') ?>" alt="">
         </div>
     </section>
     <script src="<?= base_url('assets/custom/js/jquery.min.js') ?>"></script>

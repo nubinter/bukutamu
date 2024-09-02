@@ -94,28 +94,6 @@
                     
                 }
             </style>
-         <!--
-          <div class="row mb-4">
-            <div class="col-4 pr-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>1</b></button>
-            </div>
-            <div class="col-4 px-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>2</b></button>
-            </div>
-            <div class="col-4 pl-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>3</b></button>
-            </div>
-            <div class="col-4 pr-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>4</b></button>
-            </div>
-            <div class="col-4 px-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>5</b></button>
-            </div>
-            <div class="col-4 pl-0">
-              <button type="button" class="btnjmltmu btn-block btn-custom btnJmlTamu"><b>6</b></button>
-            </div>
-          </div>
-         -->
 
           <div class="form-group">
             <button type="submit" class="btn btn-block btn-custom rounded-pill btnSubmit">Daftarkan Tamu</button>
@@ -164,33 +142,18 @@
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <script src="<?= base_url('assets/custom/toast/jquery.toast.min.js') ?>"></script>
-<!-- <script src="<?= base_url('assets/custom/sweetalert/sweet-alert.js') ?>"></script> -->
 
 <script src="<?= base_url('assets/custom/js/select.js?v=' . fileatime('assets/custom/js/select.js')) ?>"></script>
 <script src="<?= base_url('assets/custom/js/custom.js?v=' . fileatime('assets/custom/js/custom.js')) ?>"></script>
-
-
-
 
 <script>
     document.getElementById('nama').focus();
 </script>
 
-
-
-
 <script type="text/javascript">
 $(function() {
   var flash = $('.alertgagal').data('flashdata');
   if (flash) {
-    /*$.toast({
-      heading: 'WARNING',
-      text: flash,
-      showHideTransition: 'slide',
-      icon: 'error',
-      loaderBg: '#d4c357',
-      position: 'top-center'
-    }); */
      Swal.fire('Warning', flash, 'error');
   }
 });
@@ -198,14 +161,6 @@ $(function() {
 $(function() {
   var flash = $('.alertberhasil').data('flashdata');
   if (flash) {
-   /* $.toast({
-      heading: 'SUCCESS',
-      text: flash,
-      showHideTransition: 'slide',
-      icon: 'success',
-      loaderBg: '#d4c357',
-      position: 'top-center'
-    }); */
     Swal.fire('Error', flash, 'error');
   }
 });
@@ -269,15 +224,6 @@ $(document).ready(function () {
       //$('.modal#setHadirCari').modal('show');
       $('.modal#pencarianTamu').modal('hide');
     });
-
-    // $('#manual').on('click', function (e) {
-    //   e.preventDefault();
-    //   $('.modal#modalManual #formInput input').val('');
-    //   $('.modal#modalManual #formInput input#jml').val(1);
-    //   $('.modal#modalManual').modal('show');
-      
-    // })
-    
     
     $('#manual').on('click', function (e) {
         e.preventDefault();
@@ -291,9 +237,6 @@ $(document).ready(function () {
             $('#nama').focus();
         }, 500);
     });
-
-
-
     
     $(function () {
       $('#formTamuManual').submit(function (e) {

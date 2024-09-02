@@ -604,14 +604,14 @@ class Whatsapp extends CI_Controller
 	}
   
   
-  public function runSched()
-  {
-	  $currentDateTime = date('Y-m-d H:i:s');
-	  $this->m_campaign->bySchedule($currentDateTime);
-  }
+	public function runSched()
+	{
+		$currentDateTime = date('Y-m-d H:i:s');
+		$this->m_campaign->bySchedule($currentDateTime);
+	}
   
-  public function runCampaign()
-  {
+	public function runCampaign()
+	{
 	  $campaigns = $this->m_campaign->getAll();
 	  foreach($campaigns as $campaign) {
 		  if($campaign['status'] == 'starting') {
@@ -730,9 +730,7 @@ class Whatsapp extends CI_Controller
     				} else {
     					if($receiver['nomor_wa'] == null) {
     						echo 'Nomor whatsapp tamu atas nama '.$receiver['nama'].' belum didaftarkan<br />';
-    					}
-    					//elseif($receiver['is_sent'] >= 1) { echo 'Undangan untuk tamu atas nama '.$receiver['nama'].' telah dikirimkan<br />'; } 
-    					else {
+    					} else {
     						if($kuota > 0) {
         						echo 'Send whatsapp to '.$receiver['nama'].'<br />';
         						$event = $this->m_event->byId($campaign['event_id']);
@@ -816,7 +814,7 @@ class Whatsapp extends CI_Controller
 		      }
 		  }
 	  }
-    }
+	}
     
     private function downloadFile($url, $fileName) {
         $data = file_get_contents($url);
@@ -825,7 +823,6 @@ class Whatsapp extends CI_Controller
     
     private function deleteFile($fileName) {
         $filePath = $fileName; // Lokasi file
-
         // Hapus file jika ada
         if (file_exists($filePath)) {
             unlink($filePath);

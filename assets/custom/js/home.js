@@ -3,14 +3,8 @@ $('.menu-box #calScan1').on('click', function (e) {
   $('.modal#modaldwlApk').modal('show');
 })
 
-
-
-
-
 var arg = {
   resultFunction: function (result) {
-
-
     $.ajax({
       url: UrLBase + 'home/chekcode',
       type: "POST",
@@ -26,14 +20,6 @@ var arg = {
           $('.modal#modalJumlah input#jumlaht').val(1);
           $('.modal#modalJumlah input#id').val(respon.idt);
           $('.modal#modalJumlah').modal('show');
-          // $.toast({
-          //   heading: 'SELAMAT DATANG',
-          //   text: respon.pesan,
-          //   showHideTransition: 'slide',
-          //   icon: 'success',
-          //   loaderBg: '#cccc10',
-          //   position: 'top-center'
-          // });
           return false;
         }
         if (respon.kode == 3) {
@@ -44,14 +30,6 @@ var arg = {
           setTimeout(function () {
             $('.webcamQr span.warning').fadeOut("slow");
           }, 800);
-          // $.toast({
-          //   heading: 'ERROR',
-          //   text: respon.pesan,
-          //   showHideTransition: 'slide',
-          //   icon: 'error',
-          //   loaderBg: '#cccc10',
-          //   position: 'top-center'
-          // });
           return false;
         }
 
@@ -79,16 +57,12 @@ var arg = {
   }
 };
 
-
 $('#manual').on('click', function (e) {
   e.preventDefault();
   $('.modal#modalManual #formInput input').val('');
   $('.modal#modalManual #formInput input#jml').val(1);
   $('.modal#modalManual').modal('show');
 })
-
-
-
 
 $('.btnSubmit').click(function () {
   if ($(this).hasClass('disable')) {
@@ -116,17 +90,7 @@ $(function () {
       success: function (json) {
 
         if (json.kode == 1) {
-
-          /*$.toast({
-            heading: 'Success',
-            text: json.pesan,
-            showHideTransition: 'slide',
-            icon: 'success',
-            loaderBg: '#d4c357',
-            position: 'top-center'
-          });*/
            Swal.fire('Success', respon.pesan, 'success');
-
           btn.html(txt);
           btn.attr('type', 'submit');
           btn.removeClass('disabled');
@@ -137,16 +101,7 @@ $(function () {
           $('input#pencarian').val('');
           barisList(num, '');
         } else {
-          /*$.toast({
-            heading: 'Error',
-            text: json.pesan,
-            showHideTransition: 'slide',
-            icon: 'error',
-            loaderBg: '#d4c357',
-            position: 'top-center'
-          });*/
            Swal.fire('Error', respon.pesan, 'error');
-
           btn.html(txt);
           btn.attr('type', 'submit');
           btn.removeClass('disabled');
@@ -156,16 +111,11 @@ $(function () {
   });
 });
 
-
-
-
 $(document).ready(function () {
   var num = $('.pagination-custom .pagina-number').html();
   var cari = $('input#pencarian').val();
   barisList(num, cari);
 });
-
-
 
 $('input#pencarian').keyup(function () {
   var src = $(this).val();
@@ -173,8 +123,6 @@ $('input#pencarian').keyup(function () {
   $('.pagination-custom .pagina-number').html(1);
   barisList(num, src);
 })
-
-
 
 $('.pagination-custom .pagina-left').on('click', function () {
   var num = $('.pagination-custom .pagina-number').html();
@@ -201,9 +149,6 @@ $('.pagination-custom .pagina-right').on('click', function () {
   }
   barisList(plus, cari);
 })
-
-
-
 
 function barisList(num, cari) {
   $.ajax({

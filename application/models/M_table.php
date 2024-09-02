@@ -470,7 +470,16 @@ class M_table extends CI_Model
       'token' => [
         'type' => 'varchar',
         'constraint' => 200,
-        'default' => 'xxxx'
+        'default' => 'Haloo *[NAMA-TAMU]*,
+
+
+Kamu diundang, harap tunjukan QR Code sebagai akses masuk.. 🙏
+
+[LINK]
+
+
+Download QR Code E-Invitation:
+[E-INVITATION]'
       ]
     ];
     $this->dbforge->add_field($field);
