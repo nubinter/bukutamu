@@ -96,15 +96,15 @@ $('#myWaSetting').click(function () {
 		    console.log(result);
 		if(result.status == false) {
 			if(result.hasOwnProperty('qrcode')) {
-				$('.modal#waSetting #qrImg').html('<center><img class="img-responsive" src="https://bukutamudigital.app/assets/img/design/HeaderWA.png" width="360px" height="60px" /><br /><img src="'+result.qrcode+'" /><br /><img class="img-responsive" src="https://dashboard.evvent.id/assets/img/design/FooterWA.png" width="360px" height="200px" /></center>');
+        $('.modal#waSetting #qrImg').html('<center><img class="img-responsive" src="' + UrLBase + 'assets/img/design/HeaderWA.png" width="360px" height="60px" /><br /><img src="' + result.qrcode + '" /><br /><img class="img-responsive" src="' + UrLBase +'assets/img/design/FooterWA.png" width="360px" height="200px" /></center>');
 				return false;
 			}
 			if(result.hasOwnProperty('errors')) {
 				if(result.errors.hasOwnProperty('device')) {
-					$('.modal#waSetting #qrImg').html('<center><img src="https://bukutamudigital.app/assets/img/design/belumkonekQR.png" width="360px" height="360px"  /></center>');
+          $('.modal#waSetting #qrImg').html('<center><img src="' + UrLBase +'assets/img/design/belumkonekQR.png" width="360px" height="360px"  /></center>');
 				}
 			} else {
-				$('.modal#waSetting #qrImg').html('<center><img src="https://bukutamudigital.app/assets/img/design/ConnectedQR.png" alt="Whatsapp sudah terkoneksi!" width="350px" height="350px" ><a href="https://app.buktamdigital.my.id/whatsapp/campaign">Mulai Whatsapp Blast</a></center>');
+        $('.modal#waSetting #qrImg').html('<center><img src="' + UrLBase + 'assets/img/design/ConnectedQR.png" alt="Whatsapp sudah terkoneksi!" width="350px" height="350px" ><a href="' + UrLBase +'whatsapp/campaign">Mulai Whatsapp Blast</a></center>');
 			}
 		}
 		if(result.status == 'processing') {
@@ -117,14 +117,14 @@ $('#myWaSetting').click(function () {
 					console.log(result);
 					if(result.status == false) {
 						if(result.errors.device) {
-							$('.modal#waSetting #qrImg').html('<center><img src="https://app.buktamdigital.my.id/assets/img/design/belumkonekQR.png" width="360px" height="360px" /></center>');
+              $('.modal#waSetting #qrImg').html('<center><img src="' + UrLBase +'assets/img/design/belumkonekQR.png" width="360px" height="360px" /></center>');
 						}
 						if(result.qrcode) {
-							$('.modal#waSetting #qrImg').html('<img src="https://app.buktamdigital.my.id/assets/img/design/HeaderWA.png" width="360px" height="60px" /><br /><img src="'+result.qrcode+'" /><br /><img src="https://app.buktamdigital.my.id/assets/img/design/FooterWA.png" width="360px" height="200px" />');
+              $('.modal#waSetting #qrImg').html('<img src="' + UrLBase + 'assets/img/design/HeaderWA.png" width="360px" height="60px" /><br /><img src="' + result.qrcode + '" /><br /><img src="' + UrLBase +'assets/img/design/FooterWA.png" width="360px" height="200px" />');
 						}
 					}
 					if(result.status == 'processing') {
-						$('.modal#waSetting #qrImg').html('<center><img src="https://app.buktamdigital.my.id/assets/img/design/TryagainQR.png" class="img-responsive" width="360px" height="360px" /></center>');
+            $('.modal#waSetting #qrImg').html('<center><img src="' + UrLBase +'assets/img/design/TryagainQR.png" class="img-responsive" width="360px" height="360px" /></center>');
 					}
 				}
 			})

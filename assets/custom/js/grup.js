@@ -11,7 +11,7 @@ function barisList(id) {
       $("#LoadingPage").fadeOut();
       $('.list-table ul').html(respon.listPage);
       if (respon.totalRecord <= 0) {
-        $('.list-table ul').html('<center><img src="https://app.buktamdigital.my.id/assets/img/design/belumadadatagrup1.png" alt="Tidak ada data!" width="300px" height="209px" ></center>');
+        $('.list-table ul').html('<center><img src="' + UrLBase +'assets/img/design/belumadadatagrup1.png" alt="Tidak ada data!" width="300px" height="209px" ></center>');
       }
     }
   });

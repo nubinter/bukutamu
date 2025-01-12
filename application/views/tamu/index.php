@@ -18,7 +18,7 @@
       <!--<h6 class="ml-3 content-title">Data Tamu</h6>-->
       
       <h6 class="ml-3 content-title">
-      <img src="https://app.buktamdigital.my.id/assets/img/design/contact-list.png" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
+      <img src="<?= base_url('assets/img/design/contact-list.png') ?>" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
        Data Tamu
       </h6>
       

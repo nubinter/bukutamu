@@ -190,7 +190,7 @@ function barisList(num, cari) {
       $('.list-table ul').html(respon.listPage);
       $('.pagination-custom .pagina-right').removeClass('disabled');
       if (respon.totalRecord <= 0) {
-        $('.list-table ul').html('<center><img src="https://app.buktamdigital.my.id/assets/img/page/belumadatamu.png" alt="Tidak ada data!" width="300px" height="300px" ></center>');
+        $('.list-table ul').html('<center><img src="' + UrLBase +'assets/img/page/belumadatamu.png" alt="Tidak ada data!" width="300px" height="300px" ></center>');
         $('.pagination-custom .pagina-number').html(1);
       }
       var pg = Number(num);

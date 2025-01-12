@@ -85,7 +85,7 @@
       <!--<h6 class="ml-3 content-title">List Tamu Hadir</h6>-->
       
       <h7 class="ml-2 content-title">
-  <img src="https://app.buktamdigital.my.id/assets/img/design/guest-list.png" alt="Guest Icon" style="width: 22px; height: 22px; margin-right: 3px;">
+  <img src="<?= base_url('assets/img/design/guest-list.png') ?>" alt="Guest Icon" style="width: 22px; height: 22px; margin-right: 3px;">
   List Tamu Hadir
 </h7>
      </div>

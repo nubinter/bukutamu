@@ -88,7 +88,7 @@ function barisList() {
       $("#LoadingPage").fadeOut();
 	  $('#respons').html(respon.hadiah);
       if (respon.totalRecord <= 0) {
-        $('#respons').html('<center><img src="https://app.buktamdigital.my.id/assets/img/page/belumadadatatamu.png" alt="Tidak ada data!" width="300px" height="209px" ></center>');
+        $('#respons').html('<center><img src="<?= base_url('assets/img/page/belumadadatatamu.png') ?>" alt="Tidak ada data!" width="300px" height="209px" ></center>');
       }
       console.log(respon.totalRecord)
     }

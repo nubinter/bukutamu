@@ -631,7 +631,7 @@ button {
       <p class="message__text">Sepertinya kamu mengetikan laman yang salah, silahkan periksa kembali..</p>
     </div>
     <div class="error__nav e-nav">
-      <a href="https://app.buktamdigital.my.id" target="_blanck" class="e-nav__link"></a>
+      <a href="<?= base_url() ?>" target="_blanck" class="e-nav__link"></a>
     </div>
   </div>
   <!-- END Content -->

@@ -84,7 +84,6 @@
                     </p>
                 </div>
             </div>
-            <!--<img src="https://app.buktamdigital.my.id/assets/img/page/QRCODELOGIN.svg" alt="SVG Image" class="circle circle-two ">-->
         </div>
         <div class="theme-btn-container"></div>
     </section>

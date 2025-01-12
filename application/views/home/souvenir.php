@@ -17,7 +17,7 @@
       <!--<h6 class="ml-3 content-title">Penukaran Souvenir</h6>-->
       
       <h6 class="ml-3 content-title">
-      <img src="https://app.buktamdigital.my.id/assets/img/design/gift-box.png" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
+      <img src="<?= base_url('assets/img/design/gift-box.png') ?>" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
        Gift/Souvenir
       </h6>
       

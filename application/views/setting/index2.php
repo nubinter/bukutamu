@@ -550,7 +550,7 @@ $('.custom-file-input').on('change', function() {
 function updateStatus(id, status, badge) {
 	$.ajax({
 		type: "POST",
-		url: "https://app.buktamdigital.my.id/whatsapp/updatestatuscampaign",
+		url: "<?= base_url('whatsapp/updatestatuscampaign') ?>",
 		data: { id: id, status: status },
 		success: function (response) {
 			var statusElement = $('#user'+id);

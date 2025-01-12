@@ -4,7 +4,7 @@
   <!--<h4 class="mt-3">RSVP & Ucapan</h4>-->
   
   <h6 class="ml-3 content-title" style="padding-top: 12px;">
-      <img src="https://app.buktamdigital.my.id/assets/img/design/wedding-card.png" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
+      <img src="<?= base_url('assets/img/design/wedding-card.png') ?>" alt="Data Tamu" style="width: 27px; height: 27px; margin-right: 5px;">
        RSVP/Ucapan
       </h6>
   
