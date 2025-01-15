@@ -47,6 +47,13 @@ class M_campaign extends CI_Model
 		$query = $this->db->get()->result_array();
 		return $query;
 	}
+
+	public function getHistoryByTamuId($id, $campaign_id)
+	{
+		$this->db->where('id', $id)->where('campaign_id', $campaign_id);
+		$query = $this->db->get('blast_history')->row_array();
+		return $query;
+	}
 	
 	public function update_status($id, $data)
 	{
