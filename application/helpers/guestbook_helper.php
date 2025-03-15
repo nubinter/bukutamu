@@ -102,6 +102,10 @@ function cekTableDb()
   if (!$ci->db->table_exists('wa_devices')) {
     $ci->m_table->creatTbWaDevices();
   }
+  
+  if (!$ci->db->table_exists('ci_sessions')) {
+    $ci->m_table->createTbSessions();
+  }
 
   $ci->m_table->creatUser();
   $ci->m_table->creatEvent();

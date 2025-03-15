@@ -730,4 +730,35 @@ Download QR Code E-Invitation:
     $this->dbforge->add_key('id', true);
     return $this->dbforge->create_table('wa_devices', true);
   }
+  
+  public function createTbSessions()
+  {
+    $this->load->dbforge();
+
+    $fields = [
+      'id' => [
+        'type' => 'VARCHAR',
+        'constraint' => 128,
+      ],
+      'ip_address' => [
+        'type' => 'VARCHAR',
+        'constraint' => 45,
+      ],
+      'timestamp' => [
+        'type' => 'INT',
+        'constraint' => 10,
+        'unsigned' => true,
+        'default' => 0,
+      ],
+      'data' => [
+        'type' => 'BLOB',
+      ],
+    ];
+
+    $this->dbforge->add_field($fields);
+    $this->dbforge->add_key('id', false); // Tidak menjadi PRIMARY KEY
+    $this->dbforge->add_key('timestamp'); // Index untuk timestamp
+    return $this->dbforge->create_table('ci_sessions', true);
+  }
+
 }

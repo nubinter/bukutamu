@@ -46,7 +46,7 @@ html {
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: url('https://dash.ruanginvi.id/assets/img/page/BGLOGIN.png') center/cover fixed no-repeat;
+  background: url('/assets/img/page/BGLOGIN.png') center/cover fixed no-repeat;
   color: var(--color);
   letter-spacing: 1px;
   transition: background 0.2s ease;
