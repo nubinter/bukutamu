@@ -38,7 +38,7 @@
 }
 
 .bg_content{
-    background-image: url("<?=base_url('assets/img/bg.png') ?>");
+    background-image: url("../../img/bg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

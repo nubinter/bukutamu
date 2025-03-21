@@ -54,7 +54,7 @@ img {
 
     <table id="table">
         <tr id="header">
-            <img src="<?= base_url('assets/img/page/LOGO-BIRU.png') ?>" alt="">
+            <img src="assets/img/page/LOGO-BIRU.png" alt="">
             <td colspan="6" style="padding-left: 280px;">
               <span style="font-size: 16px;font-weight: bold; font-style: Poppin;">Data Tamu</span><br>
               <span style="font-weight: bold;font-size: 12px;"><?= $event['wedding'] ?> <?= $event['nama'] ?></span>
